@@ -2,7 +2,7 @@
 const Home = () => {
     return (
         <>
-            Winnie Kelley - Home
+            Home Page
         </>
     )
 }
