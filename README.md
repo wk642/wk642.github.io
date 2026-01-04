@@ -1,22 +1,136 @@
-<p align="center">
-<br/>
-<a><img src="https://img.shields.io/badge/proficient-React-green" alt="React badge" /></a>
-<a><img src="https://img.shields.io/badge/proficient-REST_API-blueviolet" alt="RESTful API badge" /></a>
-<a><img src="http://img.shields.io/badge/advanced-HTML-pink" alt="HTML badge"/></a>
-<a><img src="https://img.shields.io/badge/advanced-CSS-orange.svg?style=flat" alt="CSS badge" /></a>
-<a><img src="https://img.shields.io/badge/proficient-PostgreSQL-blue" alt="PostgresSQL badge"/></a> 
-</p>
+# Winnie Kelley's Portfolio 
+**Software Engineer | A11y & Game Dev Enthusiast | Aspiring Technical Program Manager**
 
-<div align="center">
-<picture align="center">
-<source
-  srcset="https://github-readme-stats.vercel.app/api?username=wk642&show_icons=true&title_color=B67233&bg_color=000000&text_color=FF8C00&icon_color=FFD700&hide_border=true&langs_count=8"
-  media="(prefers-color-scheme: dark)"
-/>
-<source
-  srcset="https://github-readme-stats.vercel.app/api?username=wk642&show_icons=true&title_color=FF8C00&bg_color=000000&text_color=FF8C00&icon_color=FFD700&hide_border=true&langs_count=8"
-  media="(prefers-color-scheme: dark)"
-/>
-<img src="https://github-readme-stats.vercel.app/api?username=wk642&show_icons=true" />
-</picture>
-</div>
+>**Status: 🚧 Portfolio Actively Under Construction 🚧**
+Feel free to checkout my progress and follow along
+---
+
+## 🎯 Mission
+Hi, I'm Winnie! I’m currently a **Software Engineer at Sony**. I built this portfolio because I didn't just want a "digital resume." I wanted to build a system that reflects my technical skills while adding my creativity and unique perspective.
+
+To me, **Accessibility (A11y)** isn't a boring checklist; it’s about making sure *everyone* can join the party.
+
+---
+
+## 🧠 My Thought Process
+1. From Code to Creativity
+I believe that how an engineer organizes their "backstage" code is just as creative as the design on the "front stage." By keeping things modular, I’m building for a future where I can "snap in" a custom Game Engine or a TPM Roadmap without breaking the core experience.
+
+2. The A11y Framework (Technical Standard)
+Accessibility is my foundation for better code. I built a custom A11y Framework that handles global state for fluid scaling. This allows the entire website to resize proportionally—ensuring the site remains perfectly organized and professional-looking for every user, regardless of their visual needs.
+
+3. Cognitive Load Reduction I prioritize reducing 'mental processing power'—the noise a user has to filter to find what they need. I’ve translated this into my engineering by building interfaces that are so clear they speak for themselves.
+
+> The Lexend Choice: I chose the Lexend font because it was specifically designed to help people read faster. I’m aware of the challenges faced by users with dyslexia, and Lexend’s unique spacing makes it easier for the brain to recognize letters.
+
+> Visual Quiet: I use generous spacing and a "less-is-more" approach to create a calm digital environment. This reduces distractions and naturally prepares the site for a mobile-friendly experience, where clarity is essential.
+
+## 🏗️ Project Architecture
+I’ve architected this project using a Modular Design powered by the Single Responsibility Principle (SRP).
+
+Modular Architecture: The site is built like a set of LEGO blocks. The A11y Framework is an independent system, allowing me to update the visual design or the accessibility logic separately without things breaking.
+
+Below is the current archietecture (will update before new features are added)
+```text
+src/
+├── assets/  #images, icons, pdf resume     
+├── components/      #Reusable components
+│   ├── layout/        #Resuable Wrappers
+│   ├── a11y/             #A11y framework
+│   │   ├── A11y-Menu.tsx    #UI Dashboard
+│   │   ├── A11y-Context.tsx #Global State
+│   │   ├── Font-Slider.tsx     #Font size
+│   │   ├── Theme-Toggle.tsx   #Light/Dark
+│   │   ├── Color-Filter.tsx    #Contrasts
+│   │   └── Lexend-Switch.tsx   #Cognitive
+│   ├── roadmap/    #TPM Progress Tracker
+│   └── game/           #Work in progress
+├── data/    #text & content storage
+│   ├── resume-data.ts         
+│   └── about-content.ts
+│   └── roadmap-data.ts  
+├── hooks/                  #gets content 
+│   ├── use-a11y.ts    #for a11y features
+│   └── use-content.ts         #for resume
+│   ├── use-roadmap.ts  #for roadmap data
+├── pages/             
+│   ├── About.tsx
+│   ├── Home.tsx            
+│   ├── Projects.tsx           
+│   ├── Resume.tsx            
+│   └── Roadmap.tsx       
+├── App.tsx             
+└── index.css           
+```
+___
+## 🗺️ The Roadmap (Work In Progress)
+I treat my portfolio like a living product. This roadmap tracks my progress as I ship new features using an MVP approach.
+
+### 🛠️ Phase 1: The Setup
+> Goal: Setting up the project and tools
+
+[x] Initialize Project: Create a new React app with Vite and TypeScript.
+
+[x] Install Styling: Setup Tailwind 
+
+[x]Create folders for assets, data, components/a11y, etc.
+
+[x] Setup Routing: Install react-router-dom / navigation
+
+### 🚀 Phase 2: Content & Tracker
+> Goal: Goal: Launch the MVP (About, Projects, Resume, and Live Tracker)
+[ ] Roadmap Engine: Create roadmap-data.ts and use-roadmap.ts.
+
+[ ] Interactive UI: Build Roadmap.tsx with live progress bars and status badges.
+
+[ ] The About Page
+
+[ ] The Projects Page
+
+[ ] The Resume Page
+
+[ ] Create use-content.ts
+
+### 🧠 Phase 3: The Logic
+> Goal: The "Brain"—build the logic that drives the A11y Framework.
+
+[ ] Create the Data Source: Populate data/resumeData.ts with your raw facts.
+
+[ ] Build the A11y Hub (A11y-Context.tsx):
+
+[ ] State for fontSize.
+
+[ ] State for Lexend font.
+
+[ ] State for light / dark theme.
+
+[ ] Create use-a11y.ts to update user choices.
+
+### 🎨 Phase 4: The Framework 
+> Create the a11y Framework
+
+[ ] Typography Implementation: Set up Lexend font-switching logic.
+
+[ ] Fluid Scaling: Ensure the entire site layout reacts to font-size changes.
+
+[ ] Build the A11y-Menu.tsx: 
+  - [ ] Create the Font Size slider.
+  - [ ] Create the Lexend toggle.
+  - [ ] Create the Color Filter dropdown.
+
+### 🕹️ Phase 5: The Game & Launch
+> Goal: Create the game part of this portfolio
+
+[ ] Create a basic HTML5 Canvas in components/game/Engine.tsx.
+
+[ ] Ensure game colors/assets respond to the A11y Framework settings.
+
+[ ] Lighthouse Audit
+
+### 📅 Future Backlog (v2.0)
+Any future features or improvements I plan to add.
+___
+## 🛠️ Tech Stack
+Framework: React + TypeScript 
+
+Styling: Tailwind CSS + A11y 
