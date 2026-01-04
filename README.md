@@ -36,7 +36,8 @@ src/
 ├── assets/  #images, icons, pdf resume
 ├── data/    #text & content storage
 │   ├── resumeData.ts         
-│   └── aboutContent.ts       
+│   └── aboutContent.ts
+│   └── roadmapData.ts       
 ├── components/      #Reusable components
 │   ├── layout/        #Resuable Wrappers
 │   ├── a11y/             #A11y framework
@@ -50,6 +51,7 @@ src/
 │   └── game/           #Work in progress
 ├── hooks/                  #gets content 
 │   ├── use-a11y.ts    #for a11y features
+│   ├── use-roadmap.ts  #for roadmap data
 │   └── useContent.ts         #for resume
 ├── pages/             
 │   ├── Home.tsx            
@@ -76,8 +78,9 @@ I treat my portfolio like a living product. This roadmap tracks my progress as I
 
 ### 🚀 Phase 2: Content & Tracker
 > Goal: Goal: Launch the MVP (About, Resume, and Live Tracker)
+[ ] Roadmap Engine: Create roadmapData.ts and use-roadmap.ts.
 
-[ ] The Roadmap: Build RoadmapPage.tsx to display this checklist live.
+[ ] Interactive UI: Build RoadmapPage.tsx with live progress bars and status badges.
 
 [ ] The About Page
 
@@ -120,6 +123,9 @@ I treat my portfolio like a living product. This roadmap tracks my progress as I
 [ ] Ensure game colors/assets respond to the A11y Framework settings.
 
 [ ] Lighthouse Audit
+
+### 📅 Future Backlog (v2.0)
+Any future features or improvements I plan to add.
 ___
 ## 🛠️ Tech Stack
 Framework: React + TypeScript 
