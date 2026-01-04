@@ -33,31 +33,32 @@ Modular Architecture: The site is built like a set of LEGO blocks. The A11y Fram
 Below is the current archietecture (will update before new features are added)
 ```text
 src/
-├── assets/  #images, icons, pdf resume
-├── data/    #text & content storage
-│   ├── resumeData.ts         
-│   └── aboutContent.ts
-│   └── roadmapData.ts       
+├── assets/  #images, icons, pdf resume     
 ├── components/      #Reusable components
 │   ├── layout/        #Resuable Wrappers
 │   ├── a11y/             #A11y framework
-│   │   ├── A11yMenu.tsx    #UI Dashboard
-│   │   ├── A11yContext.tsx #Global State
-│   │   ├── FontScalar.tsx     #Font size
-│   │   ├── ThemeToggle.tsx   #Light/Dark
-│   │   ├── ColorFilter.tsx    #Contrasts
-│   │   └── LexendSwitch.tsx   #Cognitive
+│   │   ├── A11y-Menu.tsx    #UI Dashboard
+│   │   ├── A11y-Context.tsx #Global State
+│   │   ├── Font-Slider.tsx     #Font size
+│   │   ├── Theme-Toggle.tsx   #Light/Dark
+│   │   ├── Color-Filter.tsx    #Contrasts
+│   │   └── Lexend-Switch.tsx   #Cognitive
 │   ├── roadmap/    #TPM Progress Tracker
 │   └── game/           #Work in progress
+├── data/    #text & content storage
+│   ├── resume-data.ts         
+│   └── about-content.ts
+│   └── roadmap-data.ts  
 ├── hooks/                  #gets content 
 │   ├── use-a11y.ts    #for a11y features
+│   └── use-content.ts         #for resume
 │   ├── use-roadmap.ts  #for roadmap data
-│   └── useContent.ts         #for resume
 ├── pages/             
+│   ├── About.tsx
 │   ├── Home.tsx            
-│   ├── About.tsx            
+│   ├── Projects.tsx           
 │   ├── Resume.tsx            
-│   └── RoadmapPage.tsx       
+│   └── Roadmap.tsx       
 ├── App.tsx             
 └── index.css           
 ```
@@ -70,19 +71,21 @@ I treat my portfolio like a living product. This roadmap tracks my progress as I
 
 [x] Initialize Project: Create a new React app with Vite and TypeScript.
 
-[ ] Install Styling: Setup Tailwind 
+[x] Install Styling: Setup Tailwind 
 
-[ ]Create folders for assets, data, components/a11y, etc.
+[x]Create folders for assets, data, components/a11y, etc.
 
-[ ] Setup Routing: Install react-router-dom / navigation
+[x] Setup Routing: Install react-router-dom / navigation
 
 ### 🚀 Phase 2: Content & Tracker
-> Goal: Goal: Launch the MVP (About, Resume, and Live Tracker)
-[ ] Roadmap Engine: Create roadmapData.ts and use-roadmap.ts.
+> Goal: Goal: Launch the MVP (About, Projects, Resume, and Live Tracker)
+[ ] Roadmap Engine: Create roadmap-data.ts and use-roadmap.ts.
 
-[ ] Interactive UI: Build RoadmapPage.tsx with live progress bars and status badges.
+[ ] Interactive UI: Build Roadmap.tsx with live progress bars and status badges.
 
 [ ] The About Page
+
+[ ] The Projects Page
 
 [ ] The Resume Page
 
@@ -93,7 +96,7 @@ I treat my portfolio like a living product. This roadmap tracks my progress as I
 
 [ ] Create the Data Source: Populate data/resumeData.ts with your raw facts.
 
-[ ] Build the A11y Hub (A11yContext.tsx):
+[ ] Build the A11y Hub (A11y-Context.tsx):
 
 [ ] State for fontSize.
 
@@ -110,7 +113,7 @@ I treat my portfolio like a living product. This roadmap tracks my progress as I
 
 [ ] Fluid Scaling: Ensure the entire site layout reacts to font-size changes.
 
-[ ] Build the A11yMenu.tsx: 
+[ ] Build the A11y-Menu.tsx: 
   - [ ] Create the Font Size slider.
   - [ ] Create the Lexend toggle.
   - [ ] Create the Color Filter dropdown.
