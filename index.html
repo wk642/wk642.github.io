@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,4 +10,63 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
+</html> -->
+
+<!-- Temporary under construction page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winnie Kelley</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #00ff41; 
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            border: 1px solid #00ff41;
+            padding: 2rem;
+            max-width: 600px;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+        }
+        h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+        p { color: #888; line-height: 1.6; }
+        a {
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid #fff;
+            padding: 0.5rem 1rem;
+            margin-top: 1.5rem;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        a:hover {
+            background-color: #fff;
+            color: #0a0a0a;
+        }
+        .loading::after {
+            content: '...';
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[WK_ENGINE] INITIALIZING<span class="loading"></span></h1>
+        <p>Portfolio architecture is currently under construction with a focus on <strong>A11y</strong> and <strong>high-performance modular components<strong></strong>.</p>
+        <p>Development is being tracked publicly via the project roadmap.</p>
+        <a href="https://github.com/wk642/wk642.github.io" target="_blank">VIEW PROJECT Repo →</a>
+        <a href="https://github.com/users/wk642/projects/7" target="_blank">VIEW PROJECT KANBAN →</a>
+    </div>
+</body>
 </html>
