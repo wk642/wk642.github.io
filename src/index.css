@@ -1,2 +1,47 @@
-/* css will be using tailwind */
 @import "tailwindcss";
+
+/* 1. Reset & Global Variables */
+:root {
+  /* Default: Professional Roboto look */
+  --font-primary: "Roboto", sans-serif;
+  
+  /* System Colors for that HUD look */
+  --color-bg: #050505;
+  --color-accent: #3b82f6; /* Blue-500 */
+}
+
+/* 2. Accessibility State */
+/* When this class is applied to a parent container via your Context */
+.dyslexia-mode {
+  --font-primary: "Lexend", sans-serif;
+}
+
+/* 3. Base Styles */
+@layer base {
+  html, body {
+    @apply antialiased selection:bg-blue-500/30;
+    background-color: var(--color-bg);
+    color: white;
+    font-family: var(--font-primary);
+    
+    /* Prevents layout jumping when font swaps */
+    transition: font-family 0.2s ease-in-out;
+  }
+
+  /* Custom Scrollbar for the technical HUD feel */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-blue-500/20 rounded-full hover:bg-blue-500/40;
+  }
+}
+
+/* 4. Utility for the Technical HUD (Force Roboto for IDs) */
+.font-technical {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.2em;
+}
