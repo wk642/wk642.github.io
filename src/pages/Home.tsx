@@ -1,4 +1,5 @@
 // import React from 'react';
+import portfolioHeadshot from "../assets/portfolio_headshot.png";
 
 const Home = () => {
     return (
@@ -14,7 +15,7 @@ const Home = () => {
                     <div className="relative w-full overflow-hidden">
                         {/* 1. Headshot */}
                         <img 
-                            src="../src/assets/portfolio_headshot.png" 
+                            src={portfolioHeadshot}
                             alt="Winnie Kelley" 
                             className="w-full h-auto object-contain"
                         />
